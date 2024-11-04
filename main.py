@@ -44,7 +44,8 @@ def lin_model_least_squares():
     X_standardized = (X - column_means) / column_stds
 
     w_part_1 = np.linalg.inv(X_standardized.transpose() @ X_standardized)
-
+    # not what they asked: just reporting the column means and column stds is enough
+    # this may be useful tho
     w = w_part_1 @ X_standardized.transpose() @ y
     print(w)
 
